@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+    mariadb:
+        image: mariadb
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: strongmariadbpassword
+            MYSQL_DATABASE: my-expenses
+        volumes:
+        - ./data:/var/lib/mysql
+    my-expenses:
+        ports:
+            - '5000:5000'
+        restart: always
+        environment:
+            - DB_HOST=mariadb
+            - DB_PORT=3306
+            - DB_USERNAME=root
+            - DB_PASSWORD=strongmariadbpassword
+            - DB_DATABASE=my-expenses
+            - DB_TABLE_NAME=my-expenses
+        image: 'aminaleahmad/my-expenses:latest'
