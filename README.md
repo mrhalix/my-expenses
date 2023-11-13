@@ -34,7 +34,7 @@ Easy and completely automatically control your expenses and track your SMS messa
 5. Fill the environment variables
 6. Run `python3 main.py` in the root directory of this repository
 
-### iOS:
+### iOS
 1. Install the [Shortcuts App](https://apps.apple.com/us/app/shortcuts/id915249334)
 2. Coming Soon: Download the Shortcut
 3. Create an automation that runs the shortcut when you receive a message from your bank
